@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { FacebookProvider } from './contexts/facebook-context';
+import { Header } from './layout/header';
 
 function App() {
+
+  const [access_token, setAccessToken] = useState<string>('')
+  const [hidden, setHidden] = useState<boolean>(false)
+
+  useEffect(() => {
+    let token = localStorage.getItem('access_token')?.toString() || '';
+    if (token) {
+      setHidden(true)
+      setAccessToken(token)
+    }
+  }, [])
+
+  const handleInit = () => {
+    localStorage.setItem('access_token', access_token)
+    setHidden(true)
+  }
+
+  const test = () => {
+    axios.get(`https://graph.facebook.com/me?fields=id,name&access_token=${access_token}`).then(response => {
+      console.log(response.data)
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FacebookProvider value={{ access_token: access_token }}>
+      <Header />
+      <div className="app">
+        <div className="fixed inset-0 bg-gray-800 w-screen h-screen" hidden={hidden}>
+          <input type="text" onChange={(e: any) => setAccessToken(e.target.value)} defaultValue={access_token} />
+          <button onClick={handleInit}>Init</button>
+        </div>
+        <button onClick={test}>Test</button>
+      </div>
+    </FacebookProvider>
   );
 }
 
