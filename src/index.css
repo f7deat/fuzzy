@@ -1,10 +1,62 @@
 :root {
   --dark: #15074E;
-  --primary: #8675EB;
-  --light: #F9F9FC;
+  --primary: #2a1d69;
+  --primary-hover: #1f1552;
+  --font: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: var(--light);
   color: var(--dark);
+  font-family: var(--font);
+  font-size: 16px;
+}
+
+input, textarea {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.form-control {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d1d1;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.control-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
