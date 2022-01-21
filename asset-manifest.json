@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fuzzy/static/css/main.8de5a89d.chunk.css",
+    "main.js": "/fuzzy/static/js/main.df25050b.chunk.js",
+    "main.js.map": "/fuzzy/static/js/main.df25050b.chunk.js.map",
+    "runtime-main.js": "/fuzzy/static/js/runtime-main.0e8946fc.js",
+    "runtime-main.js.map": "/fuzzy/static/js/runtime-main.0e8946fc.js.map",
+    "static/css/2.f4c56af9.chunk.css": "/fuzzy/static/css/2.f4c56af9.chunk.css",
+    "static/js/2.ad282737.chunk.js": "/fuzzy/static/js/2.ad282737.chunk.js",
+    "static/js/2.ad282737.chunk.js.map": "/fuzzy/static/js/2.ad282737.chunk.js.map",
+    "static/js/3.3249ca9b.chunk.js": "/fuzzy/static/js/3.3249ca9b.chunk.js",
+    "static/js/3.3249ca9b.chunk.js.map": "/fuzzy/static/js/3.3249ca9b.chunk.js.map",
+    "index.html": "/fuzzy/index.html",
+    "static/css/2.f4c56af9.chunk.css.map": "/fuzzy/static/css/2.f4c56af9.chunk.css.map",
+    "static/css/main.8de5a89d.chunk.css.map": "/fuzzy/static/css/main.8de5a89d.chunk.css.map",
+    "static/js/2.ad282737.chunk.js.LICENSE.txt": "/fuzzy/static/js/2.ad282737.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e8946fc.js",
+    "static/css/2.f4c56af9.chunk.css",
+    "static/js/2.ad282737.chunk.js",
+    "static/css/main.8de5a89d.chunk.css",
+    "static/js/main.df25050b.chunk.js"
+  ]
+}
